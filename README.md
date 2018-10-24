@@ -11,4 +11,6 @@ This game was created by:
 The game was created using Javascript, html and css.
 We used Netbeans, Android Studio, and Cordova to get the app to work on a phone.  
 
+The screencast is a video demonstration of the project pretty much
+
 ***This repository contains some of the game documents we made containing the details of the game, the final powerpoint presentation, and the Netbeans project for the game.***
