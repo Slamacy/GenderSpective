@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <script src="js/jqueryLib-3.3.1.min.js" type="text/javascript"></script>
+        <title>Genderspective</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <img src="img/hello.gif" height="170px" left="30px">
+        <div id="form1" align="center">
+            <br>
+            <label for="name"><b>Enter your name:</b></label>
+            <input id="name" type="text">
+            <p align="center" id="message_name"></p>
+
+            <label for="age"><b>Enter your age:</b></label>
+            <input id="age" type="text">
+            <p align="center" id="message_age"></p>
+
+            <h4>What is your sex?</h4><br>
+            <div id="male" onclick="location.href='wakeasgirl.html'">
+    <img src="img/MALE.gif" width=120 height=120 alt="" />
+    </div>
+    <div id="fema" onclick="location.href='wakeasboy.html'">
+    <img src="img/FEMALE.gif" width=120 height=120 alt="" />
+    </div>
+        </div>
+   
+        <script>
+        function check() {
+        var message1, x1;
+        message1 = document.getElementById("message_name");
+        message1.innerHTML = "";
+        x1 = document.getElementById("name").value;
+        try { 
+        if(x1 == "") throw "empty...";
+        if(x1.valueOf()>0) throw "a number...";
+        if(x1.length < 2) throw "too short...";
+        if(x1.length > 15) throw "too long...";
+        }
+        catch(err) {
+        message1.innerHTML = "Your name seems to be " + err;
+        }
+   
+        var message2, x2;
+        message2 = document.getElementById("message_age");
+        message2.innerHTML = "";
+        x2 = document.getElementById("age").value;
+        try { 
+        if(x2 == "") throw "empty!";
+        if(isNaN(x2)) throw "not a number!";
+        x2 = Number(x2);
+        if(x2 < 1) throw "too low!";
+        if(x2 > 120) throw "too high!";
+        }
+        catch(err) {
+        message2.innerHTML = "Your age is " + err;
+        }
+    }
+    window.setInterval(function(){check()}, 100);
+    </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Wake up!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="boy"><img src="img/night_time.gif" width="100%"></div>
+        <script>setTimeout(function(){document.getElementById("boy").innerHTML = "<img src='img/transition.gif'>";},3500);</script>
+        <script>setTimeout(function(){document.getElementById("boy").innerHTML = "<img src='img/wake.gif'>";},8500);</script>
+        <script>setTimeout(function(){document.getElementById("boy").innerHTML = "<img src='img/boy.png'>";},11000);</script>
+        <script>setTimeout(function(){document.getElementById("boy").innerHTML = "<img src='img/tap.png'>";},17000);</script>
+        <script>setTimeout(function(){window.location.href='classroom.html?gender=male'},21000);</script>
+    </body>
+</html>
